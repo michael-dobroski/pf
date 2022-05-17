@@ -1,6 +1,6 @@
 import * as THREE from 'https://unpkg.com/three@0.127.0/build/three.module.js'
 import { OrbitControls } from 'https://unpkg.com/three@0.120.1/examples/jsm/controls/OrbitControls.js'
-// import { FontLoader } from 'https://unpkg.com/three@0.120.1/src/loaders/FontLoader.js'
+import { FontLoader } from 'https://unpkg.com/three@0.120.1/src/loaders/FontLoader.js'
 
 const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
@@ -21,7 +21,7 @@ const sizes = {
 
 const camera = new THREE.PerspectiveCamera(75, sizes.width/sizes.height, 0.1, 1000)
 camera.position.set(100,0,100)
-scene.add(scene)
+scene.add(camera)
 
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas
@@ -57,7 +57,7 @@ let skyboxGeo = new THREE.BoxGeometry( 1000, 1000, 1000);
 let skybox = new THREE.Mesh( skyboxGeo, materialArray );
 scene.add( skybox );
 
-// const loader = new FontLoader();
+const loader = new FontLoader();
 
 function animate() {
     requestAnimationFrame(animate)
