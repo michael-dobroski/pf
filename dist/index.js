@@ -34,12 +34,12 @@ renderer.shadowMap.enabled = true
 
 // Loading images into VR environment
 let materialArray = [];
-let texture_ft = new THREE.TextureLoader().load( 'front.JPG' );
-let texture_bk = new THREE.TextureLoader().load( 'back.JPG' );
-let texture_up = new THREE.TextureLoader().load( 'top.JPG' );
-let texture_dn = new THREE.TextureLoader().load( 'bot.JPG' );
-let texture_rt = new THREE.TextureLoader().load( 'left.JPG' );
-let texture_lf = new THREE.TextureLoader().load( 'right.JPG' );
+let texture_ft = new THREE.TextureLoader().load( 'front.jpg' );
+let texture_bk = new THREE.TextureLoader().load( 'back.jpg' );
+let texture_up = new THREE.TextureLoader().load( 'top.jpg' );
+let texture_dn = new THREE.TextureLoader().load( 'bot.jpg' );
+let texture_rt = new THREE.TextureLoader().load( 'left.jpg' );
+let texture_lf = new THREE.TextureLoader().load( 'right.jpg' );
 
 //Overlapping mesh objects with textures  
 materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
