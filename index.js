@@ -56,6 +56,8 @@ let skyboxGeo = new THREE.BoxGeometry( 1000, 1000, 1000);
 let skybox = new THREE.Mesh( skyboxGeo, materialArray );
 scene.add( skybox );
 
+const loader = new FontLoader();
+
 function animate() {
     requestAnimationFrame(animate)
     controls.update()
